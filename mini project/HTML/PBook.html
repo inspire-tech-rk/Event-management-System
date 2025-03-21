@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Party Event Registration Form</title>
+  <link rel="stylesheet" href="/CSS/PBook.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Party Event Registration Form</h1>
+        <form id="registrationForm">
+            <h2>Event Details</h2>
+            <div class="form-group">
+                <label for="eventName">Event Name:</label>
+                <input type="text" id="eventName" name="eventName" required>
+            </div>
+            <div class="form-group">
+                <label for="eventDate">Date:</label>
+                <input type="date" id="eventDate" name="eventDate" required>
+            </div>
+            <div class="form-group">
+                <label for="eventTime">Time:</label>
+                <input type="text" id="eventTime" name="eventTime" placeholder="e.g., 7:00 PM - 11:00 PM" required>
+            </div>
+            <div class="form-group">
+                <label for="eventVenue">Venue:</label>
+                <input type="text" id="eventVenue" name="eventVenue" required>
+            </div>
+
+            <h2>Personal Information</h2>
+            <div class="form-group">
+                <label for="fullName">Full Name:</label>
+                <input type="text" id="fullName" name="fullName" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email Address:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="phone">Phone Number:</label>
+                <input type="tel" id="phone" name="phone" required>
+            </div>
+
+            <h2>Attendance Details</h2>
+            <div class="form-group">
+                <label for="guestCount">Number of Guests (Including Yourself):</label>
+                <input type="number" id="guestCount" name="guestCount" min="1" max="4" required>
+            </div>
+            <div id="guestNames"></div>
+
+            <h2>Preferences</h2>
+            <div class="form-group">
+                <label>Food Preference:</label>
+                <div class="radio-group">
+                    <label><input type="radio" name="foodPreference" value="Vegetarian" required> Vegetarian</label>
+                    <label><input type="radio" name="foodPreference" value="Non-Vegetarian"> Non-Vegetarian</label>
+                    <label><input type="radio" name="foodPreference" value="Vegan"> Vegan</label>
+                    <label><input type="radio" name="foodPreference" value="Other"> Other</label>
+                </div>
+            </div>
+            <div class="form-group" id="otherFoodPreference" style="display: none;">
+                <label for="otherFoodPreferenceText">Please Specify:</label>
+                <input type="text" id="otherFoodPreferenceText" name="otherFoodPreferenceText">
+            </div>
+            <div class="form-group">
+                <label>Any Allergies or Dietary Restrictions?</label>
+                <div class="radio-group">
+                    <label><input type="radio" name="allergies" value="No" required> No</label>
+                    <label><input type="radio" name="allergies" value="Yes"> Yes</label>
+                </div>
+            </div>
+            <div class="form-group" id="allergyDetails" style="display: none;">
+                <label for="allergyDetailsText">Please Specify:</label>
+                <input type="text" id="allergyDetailsText" name="allergyDetailsText">
+            </div>
+            <div class="form-group">
+                <label for="musicPreferences">Music Preferences (Optional):</label>
+                <input type="text" id="musicPreferences" name="musicPreferences">
+            </div>
+
+            <h2>Payment Details (if applicable)</h2>
+            <div class="form-group">
+                <label for="registrationFee">Registration Fee:</label>
+                <input type="number" id="registrationFee" name="registrationFee" min="0" step="0.01">
+            </div>
+            <div class="form-group">
+                <label for="paymentMethod">Payment Method:</label>
+                <select id="paymentMethod" name="paymentMethod">
+                    <option value="">Select a payment method</option>
+                    <option value="Credit/Debit Card">Credit/Debit Card</option>
+                    <option value="Online Payment">Online Payment (e.g., PayPal, Venmo)</option>
+                    <option value="Cash">Cash</option>
+                </select>
+            </div>
+
+            <h2>Additional Information</h2>
+            <div class="form-group">
+                <label for="hearAbout">How did you hear about this event?</label>
+                <select id="hearAbout" name="hearAbout">
+                    <option value="">Select an option</option>
+                    <option value="Friend/Family">Friend/Family</option>
+                    <option value="Social Media">Social Media</option>
+                    <option value="Email Invite">Email Invite</option>
+                    <option value="Other">Other</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="specialRequests">Any special requests or comments?</label>
+                <textarea id="specialRequests" name="specialRequests" rows="3"></textarea>
+            </div>
+
+            <h2>Terms & Conditions</h2>
+            <div class="form-group">
+                <p>By registering, you agree to abide by the event rules and guidelines. Refunds (if applicable) are subject to [Insert Policy Details].</p>
+                <label>
+                    <input type="checkbox" id="termsAgreed" name="termsAgreed" required>
+                    I have read and agree to the terms and conditions.
+                </label>
+            </div>
+            <div class="form-group">
+                <label for="signature">Signature:</label>
+                <input type="text" id="signature" name="signature" required>
+            </div>
+            <div class="form-group">
+                <label for="signatureDate">Date:</label>
+                <input type="date" id="signatureDate" name="signatureDate" required>
+            </div>
+
+            <button type="submit">Submit Registration</button>
+            <a href="http://127.0.0.1:5501/HTML/Mpay.html" class="pay">Payment</a>
+        </form>
+    </div> 
+
+    <footer>
+        <div class="PB">
+            <div class="footer-content">
+                <ul class="footer-links">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="http://127.0.0.1:5501/HTML/index.html#events">Events</a></li>
+                    <li><a href="http://127.0.0.1:5501/HTML/about.html">About</a></li>
+                    <li><a href="http://127.0.0.1:5501/HTML/contact.html">Contact</a></li>
+                </ul>
+                <div class="social-icons">
+                    <a href="#" class="social-icon">FB</a>
+                    <a href="#" class="social-icon">TW</a>
+                    <a href="#" class="social-icon">IG</a>
+                </div>
+            </div>
+            <p>&copy; 2023 EventPro. All rights reserved.</p>
+        </div>
+    </footer>
+    <script src="/JS/PBook.js"></script>
+</body>
+</html>

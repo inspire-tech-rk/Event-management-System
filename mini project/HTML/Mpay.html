@@ -1,0 +1,65 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <link rel="stylesheet" href="/CSS/Mpay.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Registration Form</h1>
+        <p>Welcome! Please fill out the details below to register.</p>
+        
+        <form id="registrationForm">
+            <div class="form-group">
+                <label for="fullName">Full Name:</label>
+                <input type="text" id="fullName" name="fullName" placeholder="Enter your complete name" required>
+            </div>
+
+            <div class="form-group">
+                <label for="contactNumber">Contact Number:</label>
+                <input type="tel" id="contactNumber" name="contactNumber" placeholder="Provide a valid mobile number" required>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email Address (optional):</label>
+                <input type="email" id="email" name="email" placeholder="Enter if you prefer email updates">
+            </div>
+
+            <div class="form-group">
+                <label for="purpose">Purpose of Payment:</label>
+                <textarea id="purpose" name="purpose" placeholder="Briefly describe what the payment is for" required></textarea>
+            </div>
+
+            <h2>Preferred Payment Method:</h2>
+                <ul class="social-links">
+                    <li><a href="https://GooglePay.com/eventmanagement" target="_blank">GooglePay</a></li><br>
+                    <li><a href="https://Phonepe.com/eventmanagement" target="_blank">Phonepe</a></li><br>
+                    <li><a href="https://Paytm.com/company/eventmanagement" target="_blank">Paytm</a></li><br>
+                    <li><a href="https://Cash.com/eventmanagement" target="_blank">Cash</a></li>
+                </ul>
+
+
+            <div class="form-group payment-instructions">
+                <h2>Payment Instructions:</h2>
+                <p>If paying via Paytm or GPay, send the payment to the following number: [Your Contact Number].</p>
+                <p>If paying via QR Scan, use the QR code below:</p>
+                <div class="qr-code"></div>
+                    <img src="/IMG/QR.jpeg" alt="QR Code">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="transactionId">Transaction ID/Reference Number:</label>
+                <input type="text" id="transactionId" name="transactionId" placeholder="Enter the transaction ID after completing your payment" required>
+            </div>
+
+            <button type="submit">Submit Registration</button>
+        </form>
+    </div>
+    <script src="/JS/MPay.js"></script>
+</body>
+</html>
+

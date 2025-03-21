@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marriage Event Registration Form</title>
+   <link rel="stylesheet" href="/CSS/MBook.css">
+</head>
+<body>
+    <h1>Marriage Event Registration Form</h1>
+    <form id="marriageRegistrationForm">
+        <h2>Personal Information</h2>
+        <div>
+            <label for="groom1">Groom/Bride 1 Full Name:</label>
+            <input type="text" id="groom1" name="groom1" required>
+        </div>
+        <div>
+            <label for="groom2">Groom/Bride 2 Full Name:</label>
+            <input type="text" id="groom2" name="groom2" required>
+        </div>
+        <div>
+            <label for="dob1">Groom/Bride 1 Date of Birth:</label>
+            <input type="date" id="dob1" name="dob1" required>
+        </div>
+        <div>
+            <label for="dob2">Groom/Bride 2 Date of Birth:</label>
+            <input type="date" id="dob2" name="dob2" required>
+        </div>
+        <div>
+            <label for="contact1">Groom/Bride 1 Contact Number:</label>
+            <input type="tel" id="contact1" name="contact1" required>
+        </div>
+        <div>
+            <label for="contact2">Groom/Bride 2 Contact Number:</label>
+            <input type="tel" id="contact2" name="contact2" required>
+        </div>
+        <div>
+            <label for="email1">Groom/Bride 1 Email Address:</label>
+            <input type="email" id="email1" name="email1" required>
+        </div>
+        <div>
+            <label for="email2">Groom/Bride 2 Email Address:</label>
+            <input type="email" id="email2" name="email2" required>
+        </div>
+        <div>
+            <label for="address1">Groom/Bride 1 Address:</label>
+            <textarea id="address1" name="address1" required></textarea>
+        </div>
+        <div>
+            <label for="address2">Groom/Bride 2 Address:</label>
+            <textarea id="address2" name="address2" required></textarea>
+        </div>
+        <div>
+            <label for="nationality1">Groom/Bride 1 Nationality:</label>
+            <input type="text" id="nationality1" name="nationality1" required>
+        </div>
+        <div>
+            <label for="nationality2">Groom/Bride 2 Nationality:</label>
+            <input type="text" id="nationality2" name="nationality2" required>
+        </div>
+
+        <h2>Marriage Details</h2>
+        <div>
+            <label for="preferredDate">Preferred Date of Marriage:</label>
+            <input type="date" id="preferredDate" name="preferredDate" required>
+        </div>
+        <div>
+            <label for="venue">Venue Preference (if any):</label>
+            <input type="text" id="venue" name="venue">
+        </div>
+        <div>
+            <label>Type of Ceremony:</label>
+            <input type="radio" id="civil" name="ceremonyType" value="civil" required>
+            <label for="civil">Civil Ceremony</label>
+            <input type="radio" id="religious" name="ceremonyType" value="religious">
+            <label for="religious">Religious Ceremony</label>
+            <input type="radio" id="other" name="ceremonyType" value="other">
+            <label for="other">Other</label>
+            <input type="text" id="otherCeremonyType" name="otherCeremonyType" placeholder="Please specify" style="display: none;">
+        </div>
+        <div>
+            <label for="guestCount">Number of Guests (approximate):</label>
+            <input type="number" id="guestCount" name="guestCount" required>
+        </div>
+
+        <h2>Additional Information</h2>
+        <div>
+            <label for="specialRituals">Are there any special rituals/customs?</label>
+            <input type="checkbox" id="specialRituals" name="specialRituals">
+            <textarea id="ritualsDescription" name="ritualsDescription" placeholder="Please specify" style="display: none;"></textarea>
+        </div>
+        <div>
+            <label>Do you need assistance with the following?</label>
+            <div>
+                <input type="checkbox" id="catering" name="assistance" value="catering">
+                <label for="catering">Catering</label>
+            </div>
+            <div>
+                <input type="checkbox" id="photography" name="assistance" value="photography">
+                <label for="photography">Photography/Videography</label>
+            </div>
+            <div>
+                <input type="checkbox" id="music" name="assistance" value="music">
+                <label for="music">Music/Entertainment</label>
+            </div>
+            <div>
+                <input type="checkbox" id="decoration" name="assistance" value="decoration">
+                <label for="decoration">Decoration</label>
+            </div>
+            <div>
+                <input type="checkbox" id="others" name="assistance" value="others">
+                <label for="others">Others</label>
+                <input type="text" id="otherAssistance" name="otherAssistance" placeholder="Please specify" style="display: none;">
+            </div>
+        </div>
+
+        <h2>Emergency Contact</h2>
+        <div>
+            <label for="emergencyName">Name:</label>
+            <input type="text" id="emergencyName" name="emergencyName" required>
+        </div>
+        <div>
+            <label for="emergencyRelationship">Relationship:</label>
+            <input type="text" id="emergencyRelationship" name="emergencyRelationship" required>
+        </div>
+        <div>
+            <label for="emergencyPhone">Phone Number:</label>
+            <input type="tel" id="emergencyPhone" name="emergencyPhone" required>
+        </div>
+
+        <div>
+            <h2>Declaration</h2>
+            <p>By submitting this form, I/we confirm that the information provided is accurate and agree to the terms and conditions of participation in the marriage event.</p>
+        </div>
+
+        <button type="submit">Submit Registration</button>
+        <a href="http://127.0.0.1:5501/HTML/Mpay.html" class="pay">Payment</a>
+    </form>
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <ul class="footer-links">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="http://127.0.0.1:5501/HTML/index.html#events">Events</a></li>
+                    <li><a href="http://127.0.0.1:5501/HTML/about.html">About</a></li>
+                    <li><a href="http://127.0.0.1:5501/HTML/contact.html">Contact</a></li>
+                </ul>
+                <div class="social-icons">
+                    <a href="#" class="social-icon">FB</a>
+                    <a href="#" class="social-icon">TW</a>
+                    <a href="#" class="social-icon">IG</a>
+                </div>
+            </div>
+            <p>&copy; 2023 EventPro. All rights reserved.</p>
+        </div>
+    </footer>
+    <script src="/JS/MBook.js"></script>
+</body>
+</html>
+

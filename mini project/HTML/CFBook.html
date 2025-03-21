@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>College Function Event Registration Form</title>
+    <link rel="stylesheet" href="/CSS/CFBook.css">
+</head>
+<body>
+    <div class="container">
+        <h1>College Function Event Registration Form</h1>
+        <form id="registrationForm">
+            <h2>Event Details</h2>
+            <div class="form-group">
+                <label for="eventName">Event Name:</label>
+                <input type="text" id="eventName" name="eventName" required>
+            </div>
+            <div class="form-group">
+                <label for="eventDate">Date:</label>
+                <input type="date" id="eventDate" name="eventDate" required>
+            </div>
+            <div class="form-group">
+                <label for="startTime">Start Time:</label>
+                <input type="time" id="startTime" name="startTime" required>
+            </div>
+            <div class="form-group">
+                <label for="endTime">End Time:</label>
+                <input type="time" id="endTime" name="endTime" required>
+            </div>
+            <div class="form-group">
+                <label for="venue">Venue:</label>
+                <input type="text" id="venue" name="venue" required>
+            </div>
+
+            <h2>Participant Information</h2>
+            <div class="form-group">
+                <label for="fullName">Full Name:</label>
+                <input type="text" id="fullName" name="fullName" required>
+            </div>
+            <div class="form-group">
+                <label for="rollNumber">Roll Number/ID:</label>
+                <input type="text" id="rollNumber" name="rollNumber" required>
+            </div>
+            <div class="form-group">
+                <label for="department">Department:</label>
+                <input type="text" id="department" name="department" required>
+            </div>
+            <div class="form-group">
+                <label>Year:</label>
+                <div class="radio-group">
+                    <input type="radio" id="year1" name="year" value="1st Year" required>
+                    <label for="year1">1st Year</label>
+                    <input type="radio" id="year2" name="year" value="2nd Year">
+                    <label for="year2">2nd Year</label>
+                    <input type="radio" id="year3" name="year" value="3rd Year">
+                    <label for="year3">3rd Year</label>
+                    <input type="radio" id="year4" name="year" value="4th Year">
+                    <label for="year4">4th Year</label>
+                    <input type="radio" id="yearOther" name="year" value="Other">
+                    <label for="yearOther">Other:</label>
+                    <input type="text" id="yearOtherText" name="yearOtherText">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="contactNumber">Contact Number:</label>
+                <input type="tel" id="contactNumber" name="contactNumber" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email Address:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label>Team/Individual:</label>
+                <div class="radio-group">
+                    <input type="radio" id="individual" name="teamType" value="Individual" required>
+                    <label for="individual">Individual</label>
+                    <input type="radio" id="team" name="teamType" value="Team">
+                    <label for="team">Team</label>
+                </div>
+            </div>
+            <div class="form-group" id="teamDetails" style="display: none;">
+                <label for="teamName">Team Name:</label>
+                <input type="text" id="teamName" name="teamName">
+                <label for="teamMembers">Number of Members:</label>
+                <input type="number" id="teamMembers" name="teamMembers" min="2">
+            </div>
+
+            <h2>Event Participation</h2>
+            <div class="form-group">
+                <label>Which category are you participating in?</label>
+                <div class="radio-group">
+                    <input type="radio" id="cultural" name="category" value="Cultural" required>
+                    <label for="cultural">Cultural (e.g., Dance, Singing, Drama)</label>
+                    <input type="radio" id="sports" name="category" value="Sports">
+                    <label for="sports">Sports</label>
+                    <input type="radio" id="technical" name="category" value="Technical Events">
+                    <label for="technical">Technical Events (e.g., Coding, Quiz)</label>
+                    <input type="radio" id="categoryOther" name="category" value="Other">
+                    <label for="categoryOther">Others:</label>
+                    <input type="text" id="categoryOtherText" name="categoryOtherText">
+                </div>
+            </div>
+
+            <h2>Payment Details (If Applicable)</h2>
+            <div class="form-group">
+                <label for="registrationFee">Registration Fee (Rs.):</label>
+                <input type="number" id="registrationFee" name="registrationFee" min="0">
+            </div>
+            <div class="form-group">
+                <label>Payment Mode:</label>
+                <div class="radio-group">
+                    <input type="radio" id="cash" name="paymentMode" value="Cash">
+                    <label for="cash">Cash</label>
+                    <input type="radio" id="onlineTransfer" name="paymentMode" value="Online Transfer">
+                    <label for="onlineTransfer">Online Transfer</label>
+                    <input type="radio" id="upi" name="paymentMode" value="UPI">
+                    <label for="upi">UPI</label>
+                    <input type="radio" id="paymentOther" name="paymentMode" value="Other">
+                    <label for="paymentOther">Other:</label>
+                    <input type="text" id="paymentOtherText" name="paymentOtherText">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="transactionId">Transaction ID (if online):</label>
+                <input type="text" id="transactionId" name="transactionId">
+            </div>
+
+            <h2>Declaration</h2>
+            <div class="form-group">
+                <p>I hereby declare that the above information is true to the best of my knowledge. I agree to abide by the rules and regulations of the event.</p>
+            </div>
+            <div class="form-group">
+                <label for="signature">Signature:</label>
+                <input type="text" id="signature" name="signature" required>
+            </div>
+            <div class="form-group">
+                <label for="date">Date:</label>
+                <input type="date" id="date" name="date" required>
+            </div>
+
+            <button type="submit">Submit Registration</button>
+            <a href="http://127.0.0.1:5501/HTML/Mpay.html" class="pay">Payment</a>
+        </form>
+    </div>
+
+    <footer>
+        <div class="CF">
+            <div class="footer-content">
+                <ul class="footer-links">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="http://127.0.0.1:5501/HTML/index.html#events">Events</a></li>
+                    <li><a href="http://127.0.0.1:5501/HTML/about.html">About</a></li>
+                    <li><a href="http://127.0.0.1:5501/HTML/contact.html">Contact</a></li>
+                </ul>
+                <div class="social-icons">
+                    <a href="#" class="social-icon">FB</a>
+                    <a href="#" class="social-icon">TW</a>
+                    <a href="#" class="social-icon">IG</a>
+                </div>
+            </div>
+            <p>&copy; 2023 EventPro. All rights reserved.</p>
+        </div>
+    </footer>
+    <script src="/JS/CFBook.js"></script>
+</body>
+</html>

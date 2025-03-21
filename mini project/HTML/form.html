@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Booking Form</title>
+    <link rel="stylesheet" href="/CSS/fstyle.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Event Booking Form</h2>
+        <form action="#" method="POST">
+            <fieldset>
+                <legend>Event Information</legend>
+                <label for="event-name">Event Name:</label>
+                <input type="text" id="event-name" name="event-name" required><br>
+
+                <label for="event-date">Event Date:</label>
+                <input type="date" id="event-date" name="event-date" required><br>
+
+                <label for="event-time">Event Time:</label>
+                <input type="time" id="event-time" name="event-time" required><br>
+
+                <label for="event-location">Event Location:</label>
+                <input type="text" id="event-location" name="event-location" required><br>
+
+                <label for="event-type">Type of Event:</label>
+                <select id="event-type" name="event-type" required>
+                    <option >Select event type</option>
+                    <option value="wedding">Marriage</option>
+                    <option value="conference">Party</option>
+                    <option value="party">College Function</option>
+                    <option value="other">Other</option>
+                </select><br>
+                <label for="attendees">Number of Attendees</label>
+                <input type="number" id="attendees" name="attendees" min="1" value="1" required>
+            </fieldset>
+
+            <fieldset>
+                <legend>Contact Information</legend>
+                <label for="full-name">Full Name:</label>
+                <input type="text" id="full-name" name="full-name" required><br>
+
+                <label for="email">Email Address:</label>
+                <input type="email" id="email" name="email" required><br>
+
+                <label for="phone">Phone Number:</label>
+                <input type="tel" id="phone" name="phone" required>
+            </fieldset>
+
+            <fieldset>
+                <legend>Booking Details</legend>
+                <label for="attendees">Number of Attendees:</label>
+                <input type="number" id="attendees" name="attendees" min="1" required><br>
+
+                <label>Additional Services Needed:</label>
+                <label><input type="checkbox" name="services" value="catering"> Catering</label>
+                <label><input type="checkbox" name="services" value="audio-visual"> Audio/Visual Equipment</label>
+                <label><input type="checkbox" name="services" value="decorations"> Decorations</label>
+                <label><input type="checkbox" name="services" value="transportation"> Transportation</label>
+                <label><input type="checkbox" name="services" value="guest-speaker"> Guest Speaker</label>
+                <label><input type="checkbox" name="services" value="other-services"> Other</label><br>
+               
+
+                <h2>Preferred Payment Method:</h2>
+                <ul class="social-links">
+                    <li><a href="https://GooglePay.com/eventmanagement" target="_blank">GooglePay</a></li><br>
+                    <li><a href="https://Phonepe.com/eventmanagement" target="_blank">Phonepe</a></li><br>
+                    <li><a href="https://Paytm.com/company/eventmanagement" target="_blank">Paytm</a></li><br>
+                    <li><a href="https://Cash.com/eventmanagement" target="_blank">Cash</a></li>
+                </ul>
+
+
+                <label for="special-requests">Special Requests or Comments:</label>
+                <label><input type="text" id="special-requests" name="special-requests"></label>
+            </fieldset>
+
+            <fieldset>
+                <label><input type="checkbox" name="terms" required> I agree to the terms and conditions.</label>
+            </fieldset>
+
+            <button type="submit" class="submit-btn">Submit</button>
+        </form>
+    </div><br>
+    <footer>
+        <div class="form">
+            <div class="footer-content">
+                <ul class="footer-links">
+                    <li><a href="http://127.0.0.1:5501/HTML/index.html#home">Home</a></li>
+                    <li><a href="http://127.0.0.1:5501/HTML/index.html#events">Events</a></li>
+                    <li><a href="http://127.0.0.1:5501/HTML/about.html">About</a></li>
+                    <li><a href="http://127.0.0.1:5501/HTML/contact.html">Contact</a></li>
+                </ul>
+                <div class="social-icons">
+                    <a href="#" class="social-icon">FB</a>
+                    <a href="#" class="social-icon">TW</a>
+                    <a href="#" class="social-icon">IG</a>
+                </div>
+            </div>
+            <p>&copy; 2023 EventPro. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
